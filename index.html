@@ -21,11 +21,14 @@
         </section>
     </header>
     <main>
-        <section class="container">
+        <section class="container d-flex justify-content-center">
             <div id="app">
-                <div class="todoList d-flex justify-content-center">
-                    <ul id="todo"></ul>
-                    <input type="text" v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new task to do!" class="mb-2 border rounded w-75 ">
+                <div class="todoList ">
+                    <ul id="todo">
+                        <li v-for="(todo, index) in todos" :key="index" class="list-group-item d-flex justify-content-between align-items-center"></li>
+                    </ul>
+                    <input type="text" v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new task to do!" class="mb-2 border rounded w-100 pt-3 ps-5">
+                    
 
                 </div>
             </div>
