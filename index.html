@@ -15,7 +15,7 @@
 <title>vue-todolist</title>
 </head>
 <body>
-    <header class="p-4 ">
+    <header class="pt-5 d-flex justify-content-center">
         <section class="title">
             <h1>ToDo List</h1>
         </section>
@@ -23,9 +23,9 @@
     <main>
         <section class="container">
             <div id="app">
-                <div class="todoList">
+                <div class="todoList d-flex justify-content-center">
                     <ul id="todo"></ul>
-
+                    <input type="text" v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new task to do!" class="mb-2 border rounded w-75 ">
 
                 </div>
             </div>
