@@ -13,6 +13,9 @@ body{
 
 section.container{
     margin: 0 auto;
-    width: 850px;
-    border: solid 3px a;
+    width: 600px;
+    border: solid 3px #00417e;
+    padding: 3rem 0 1rem;
+    background-color: rgb(80, 169, 252);
+    border-radius: 30px;
 }
