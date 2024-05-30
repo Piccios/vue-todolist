@@ -3,7 +3,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            toDolist: [
+            newTodo: '',
+            toDoList: [
                 {
                     content: `Go to the store and buy the ingredient for the cake`,
                     done: false
@@ -21,8 +22,8 @@ createApp({
     },
     methods: {
         addTodo(){
-            if (this.newTodo.trim() === '') {
-                this.todo.push({ text: this.newTodo, done: false });
+            if (this.newTodo.trim() !== '') {
+                this.toDoList.push({ content: this.newTodo, done: false });
                 this.newTodo = '';
             }
         }
