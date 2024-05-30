@@ -26,7 +26,7 @@
                 <div class="todoList ">
                     <ul id="todo">
                         <li v-for="(todo, index) in toDoList" :key="index" class="list-group-item d-flex justify-content-between align-items-center">
-                            <span></span>
+                            <span :class="{ 'completed': todo.done }" @click="toggle(todo)">{{ todo.content }}</span>
                         </li>
                     </ul>
                     <input type="text" v-model="newTodo" @keyup.enter="addTodo" placeholder="Add a new task to do!" class="mb-4 border rounded w-100 pt-3 ps-5">

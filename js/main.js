@@ -26,6 +26,9 @@ createApp({
                 this.toDoList.push({ content: this.newTodo, done: false });
                 this.newTodo = '';
             }
+        },
+        toggle(todo) {
+            todo.done = !todo.done;
         }
     }
 }).mount('#app')

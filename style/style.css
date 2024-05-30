@@ -3,5 +3,16 @@ body{
     font-family: "Borel", cursive;
     font-weight: 400;
     font-style: normal;
+    min-width: 900px
 }
 
+.completed{
+    text-decoration: line-through;
+    color: grey;
+}
+
+section.container{
+    margin: 0 auto;
+    width: 850px;
+    border: solid 3px a;
+}
