@@ -17,6 +17,17 @@ createApp({
                     done: false
                 }
             ]
+        }; 
+    },
+    methods: {
+        addTodo(){
+            if (this.newTodo.trim() === '') {
+                this.todo.push({ text: this.newTodo, done: false });
+                this.newTodo = '';
+            }
+        },
+        removeTodo(index) {
+            this.todo.splice(index, 1);
         }
     }
 }).mount('#app')
